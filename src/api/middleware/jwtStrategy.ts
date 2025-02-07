@@ -16,7 +16,7 @@ export const passportStrategy = () => {
     if (user) {
       const newUser = {
         id: user.id,
-        username: user.username,
+        email: user.email,
         is_superuser: user.is_superuser,
       };
 

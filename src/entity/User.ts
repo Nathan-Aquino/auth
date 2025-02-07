@@ -13,7 +13,7 @@ import {
     id!: number;
   
     @Column({ unique: true })
-    username: string;
+    email: string;
   
     @Column()
     password: string;
@@ -21,8 +21,8 @@ import {
     @Column()
     is_superuser: boolean;
   
-    constructor(username: string, password: string, is_superuser: boolean) {
-      this.username = username;
+    constructor(email: string, password: string, is_superuser: boolean) {
+      this.email = email;
       this.password = password;
       this.is_superuser = is_superuser;
     }
