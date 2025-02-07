@@ -13,7 +13,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization"); 
 
   if (req.method === "OPTIONS") {
-    return res.sendStatus(204); // Responde rapidamente às requisições OPTIONS
+    return res.sendStatus(204);
   }
 
   next();
