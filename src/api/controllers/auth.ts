@@ -14,7 +14,7 @@ export const login = async (req: Request, res: Response) => {
   if (user) {
     if (bcrypt.compareSync(password, user.password)) {
       const token = jwt.sign({ id: user.id, username: user.username }, "xpto");
-      res.status(200).send({ token: token });
+      res.status(200).send({ token: `Bearer ${token}` });
     } else {
       res.status(401).send({ error: "Invalid password!" });
     }
